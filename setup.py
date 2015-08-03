@@ -48,7 +48,7 @@ setup_params = dict(
     setup_requires=sphinx_req + pytest_runner,
     tests_require=['pytest'],
     extras_require={
-        ':python_version=="2.6"': ['importlib'],
+        ':python_version=="2.6"': ['importlib', 'unittest2'],
     },
 )
 

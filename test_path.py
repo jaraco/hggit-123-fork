@@ -14,7 +14,6 @@ seconds to allow some time to pass between calls to check the modify
 time on files.
 """
 
-import unittest
 import codecs
 import os
 import sys
@@ -31,6 +30,11 @@ import pytest
 
 from path import Path, tempdir, u
 from path import CaseInsensitivePattern as ci
+
+if sys.version_info < (2, 7):
+    import unittest2 as unittest
+else:
+    import unittest
 
 
 def p(**choices):
